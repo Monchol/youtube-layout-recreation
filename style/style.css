@@ -21,16 +21,16 @@ body {
     --color-oscuro3:#212121;
     --color-oscuro2:#121212;
     --color-oscuro1:#222;
-    display: grid;
     background-color: var(--color-oscuro2);
     gap: 10px;
+    display: grid;
     grid-template: 
     "header" 50px
     "video" min-content
     "coments" min-content
     "next-video" min-content
     "shorts" 400px
-    "videos" auto;
+    "videos" auto / 100vw;
     #header {
         grid-area: header;
         background-color: var(--color-oscuro1);
