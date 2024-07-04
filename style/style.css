@@ -108,11 +108,20 @@ body {
                     padding: 5px 10px;
                     border-radius: 10px;
                 }
-                .video-items:hover {
-                    background-color: #fff;
-                    color: #000;
-                    transition: 250ms;
+
+                @media (hover:hover) {
+                    .video-items:hover {
+                        background-color: #fff;
+                        color: #000;
+                        transition: 250ms;
+                    }
                 }
+
+                .video-items:active {
+                    color: #000;
+                    background-color: #aaa;
+                }
+
             }
 
             
@@ -215,16 +224,31 @@ body {
                     display: flex;
                     gap:10px;
                 }
+
+                @media (hover:hover){
+                    .comment-button:hover {
+                        transition: 250ms;
+                        background-color: #555;
+                    }
+
+                    .reply-button:hover {
+                        background: #6bf;
+                        transition: 250ms;
+                    }
+                }
+
                 .comment-button {
                     color: #fff;
                     text-decoration: none;
                     padding: 5px 10px;
                     border-radius: 10px;
                 }
-                .comment-button:hover {
-                    transition: 250ms;
-                    background-color: #555;
+
+                .comment-button:active {
+                    color: #000;
+                    background-color: #aaa;
                 }
+
                 .reply-button {
                     margin-top: 10px;
                     padding: 5px 10px;
@@ -233,10 +257,12 @@ body {
                     color: #fff;
                     text-decoration: none;
                 }
-                .reply-button:hover {
-                    background: #6bf;
-                    transition: 250ms;
+
+                .reply-button:active {
+                    color: #000;
+                    background-color: #aaa;
                 }
+
             }
             
         }
@@ -295,8 +321,7 @@ body {
     }
 
     
-/*
-    @media (max-width:234px) {
+/*  @media (max-width:234px) {
         .select-video {
             height: 100%;
             flex-direction: column;
@@ -346,9 +371,5 @@ body {
         "video videos" 150px
         "coments videos" auto
         "coments videos" auto / auto 400px;
-        #coments {
-            grid-area: coments;
-            display: flex;
-        }
     }
 }
